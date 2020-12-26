@@ -1,5 +1,6 @@
 import React from 'react';
 import Image from './Image';
+import ImageFull from './ImageFull';
 
 const ImagesList = ({ listOfImages }) => {
   return (

@@ -1,14 +1,19 @@
 import React, { Component } from 'react';
 import ImagesHoc from './hoc/ImagesHoc';
-
+import ImageFull from './components/ImageFull';
+import { BrowserRouter, Route } from "react-router-dom";
 class App extends Component {
-  
+
 
   render() {
     return (
-      <div className="container">
-        <ImagesHoc/>
-      </div>
+      <BrowserRouter>
+        <div className="container">
+          <Route exact path="/" component={ImagesHoc} />
+          <Route path="/image/:id" component={ImageFull} />
+        </div>
+      </BrowserRouter>
+
     );
   }
 }

@@ -1,0 +1,2 @@
+export const GET_IMAGES_LIST = 'GET_IMAGES_LIST'
+export const GET_ONE_IMAGE = 'GET_ONE_IMAGE'

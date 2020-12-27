@@ -1,2 +1,5 @@
 export const GET_IMAGES_LIST = 'GET_IMAGES_LIST'
 export const GET_ONE_IMAGE = 'GET_ONE_IMAGE'
+export const LOAD_STARTED = 'LOAD_STARTED'
+export const LOAD_SUCCESS = 'LOAD_SUCCESS'
+export const LOAD_ERROR = 'LOAD_ERROR'

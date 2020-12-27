@@ -1,34 +1,23 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import { useDispatch } from 'react-redux'
 import ImagesList from '../components/ImagesList';
-import { actionCreatorImagesList } from '../redux/actions/actionsCreator'
+import { actionImagesList } from '../redux/actions/actions'
+import { useSelector } from 'react-redux';
 
 const ImagesHoc = () => {
 
-  const [images, setImages] = useState([]);
   const dispatch = useDispatch()
-  useEffect(async () => {
-    let link = "https://api.unsplash.com/photos/?client_id=cf49c08b444ff4cb9e4d126b7e9f7513ba1ee58de7906e4360afc1a33d1bf4c0 "
+  useEffect(() => {
+    dispatch(actionImagesList())
+  });
 
-    try {
-      let response = await fetch(link)
-      let data = await response.json()
-      setImages(data)
-      dispatch(actionCreatorImagesList(data))
-      
-    } catch (error) {
-      console.log("error", error)
-    }
-
-  }, []);
+  const imagesList = useSelector(state => state.data.imagesList)
 
   return (
     <div>
-      <ImagesList listOfImages={images} />
+      <ImagesList listOfImages={imagesList} />
     </div>
   );
 }
-
-
 
 export default ImagesHoc

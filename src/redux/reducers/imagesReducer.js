@@ -1,5 +1,5 @@
 import { GET_IMAGES_LIST, GET_ONE_IMAGE } from '../actions/actionsTypes'
-const imagesListReducer = (state = [], action) => {
+const imagesListReducer = (state = { imagesList: [], image: {} }, action) => {
   switch (action.type) {
     case GET_IMAGES_LIST:
       return {

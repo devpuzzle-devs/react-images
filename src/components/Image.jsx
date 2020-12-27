@@ -1,5 +1,5 @@
 import React from 'react';
-import { actionCreatorImage } from '../redux/actions/actionsCreator'
+import { actionCreatorImage } from '../redux/actions/actions'
 import { useDispatch } from 'react-redux'
 import { useHistory } from 'react-router-dom';
 
@@ -23,7 +23,6 @@ const Image = ({ image }) => {
       </td>
       <td>{image.user.name}</td>
       <td>{image.user.first_name}</td>
-      <td>{image.user.last_name}</td>
       <td>{image.user.last_name}</td>
     </tr>
   );

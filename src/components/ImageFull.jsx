@@ -7,8 +7,8 @@ const ImageFull = () => {
   
   return (
     <div >
-      <button onClick={() => history.push("/")}>Back</button>
-      { image && <img style={{ width: image.width, height: image.height }} src={image.urls.full} />}
+      <button className="btn btn-info mb-2 mt-2" onClick={() => history.push("/")}>Back</button>
+      { image && <img style={{ width: image.width, height: image.height }} src={image.urls.full} alt="" />}
     </div>
   );
 }

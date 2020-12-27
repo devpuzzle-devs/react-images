@@ -1,9 +1,14 @@
 import React from 'react';
-
-const ImageFull = ({ image }) => {
+import { useSelector } from 'react-redux';
+import { useHistory } from 'react-router-dom';
+const ImageFull = () => {
+  const image = useSelector(state => state.data.image[0])
+  const history = useHistory()
+  
   return (
     <div >
-      <img style={{ width: image.width, height: image.height }} src={image.urls.full} />
+      <button onClick={() => history.push("/")}>Back</button>
+      { image && <img style={{ width: image.width, height: image.height }} src={image.urls.full} />}
     </div>
   );
 }

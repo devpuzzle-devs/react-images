@@ -10,7 +10,7 @@ class App extends Component {
       <BrowserRouter>
         <div className="container">
           <Route exact path="/" component={ImagesHoc} />
-          <Route path="/image/:id" component={ImageFull} />
+          <Route path="/image" component={ImageFull} />
         </div>
       </BrowserRouter>
 

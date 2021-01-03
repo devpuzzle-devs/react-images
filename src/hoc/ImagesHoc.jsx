@@ -9,7 +9,7 @@ const ImagesHoc = () => {
   const dispatch = useDispatch()
   useEffect(() => {
     dispatch(actionImagesList())
-  });
+  },[]);
 
   const imagesList = useSelector(state => state.data.imagesList)
 
